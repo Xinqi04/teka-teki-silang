@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Teka-Teki Silang</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <h1>TEKA TEKI SILANG</h1>
+
+    <div class="crossword-container">
+        <div class="grid">
+            <!-- Setiap kotak jawaban diberikan id yang unik untuk memudahkan pengecekan -->
+            <!-- baris 0 -->
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-number-menurun">1</div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+
+            <!-- baris 1 -->
+            <div class="grid-number-mendatar">1</div>
+            <input type="text" id="1" maxlength="1" class="grid-item">
+            <input type="text" id="2" maxlength="1" class="grid-item">
+            <input type="text" id="3" maxlength="1" class="grid-item">
+            <input type="text" id="4" maxlength="1" class="grid-item">
+            <input type="text" id="5" maxlength="1" class="grid-item">
+            <input type="text" id="6" maxlength="1" class="grid-item">
+            <input type="text" id="7" maxlength="1" class="grid-item">
+            <input type="text" id="8" maxlength="1" class="grid-item">
+            <input type="text" id="9" maxlength="1" class="grid-item">
+            <input type="text" id="10" maxlength="1" class="grid-item">
+            <div class="grid-item black"></div>
+
+            <!-- baris 2 -->
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <input type="text" id="16" maxlength="1" class="grid-item">
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-number-menurun">3</div>
+
+            <!-- baris 3 -->
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <input type="text" id="27" maxlength="1" class="grid-item">
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-number-menurun">2</div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <input type="text" id="33" maxlength="1" class="grid-item">
+
+            <!-- baris 4 -->
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-number-mendatar">2</div>
+            <input type="text" id="37" maxlength="1" class="grid-item">
+            <input type="text" id="38" maxlength="1" class="grid-item">
+            <input type="text" id="39" maxlength="1" class="grid-item">
+            <input type="text" id="40" maxlength="1" class="grid-item">
+            <input type="text" id="41" maxlength="1" class="grid-item">
+            <input type="text" id="42" maxlength="1" class="grid-item">
+            <input type="text" id="43" maxlength="1" class="grid-item">
+            <input type="text" id="44" maxlength="1" class="grid-item">
+
+            <!-- baris 5 -->
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-number-menurun">4</div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <input type="text" id="49" maxlength="1" class="grid-item">
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <input type="text" id="52" maxlength="1" class="grid-item">
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <input type="text" id="55" maxlength="1" class="grid-item">
+
+            <!-- baris 6 -->
+            <div class="grid-item black"></div>
+            <div class="grid-number-mendatar">4</div>
+            <input type="text" id="57" maxlength="1" class="grid-item">
+            <input type="text" id="58" maxlength="1" class="grid-item">
+            <input type="text" id="59" maxlength="1" class="grid-item">
+            <input type="text" id="60" maxlength="1" class="grid-item">
+            <div class="grid-item black"></div>
+            <div class="grid-number-menurun">5</div>
+            <input type="text" id="63" maxlength="1" class="grid-item">
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <input type="text" id="66" maxlength="1" class="grid-item">
+
+            <!-- baris 7 -->
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <input type="text" id="68" maxlength="1" class="grid-item">
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <input type="text" id="71" maxlength="1" class="grid-item">
+            <div class="grid-item black"></div>
+            <input type="text" id="73" maxlength="1" class="grid-item">
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <input type="text" id="77" maxlength="1" class="grid-item">
+
+            <!-- baris 8 -->
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <input type="text" id="79" maxlength="1" class="grid-item">
+            <div class="grid-number-mendatar">3</div>
+            <input type="text" id="81" maxlength="1" class="grid-item">
+            <input type="text" id="82" maxlength="1" class="grid-item">
+            <input type="text" id="83" maxlength="1" class="grid-item">
+            <input type="text" id="84" maxlength="1" class="grid-item">
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+
+            <!-- baris 9 -->
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <input type="text" id="90" maxlength="1" class="grid-item">
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-number-mendatar">5</div>
+            <input type="text" id="95" maxlength="1" class="grid-item">
+            <input type="text" id="96" maxlength="1" class="grid-item">
+            <input type="text" id="97" maxlength="1" class="grid-item">
+            <input type="text" id="98" maxlength="1" class="grid-item">
+            <input type="text" id="99" maxlength="1" class="grid-item">
+
+            <!-- baris 10 -->
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <input type="text" id="101" maxlength="1" class="grid-item">
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <input type="text" id="106" maxlength="1" class="grid-item">
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+
+             <!-- baris 11 -->
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+            <div class="grid-item black"></div>
+        </div>
+    </div>
+    <div class="question-container">
+        <div class="pertanyaan-mendatar">
+            <h3>Pertanyaan Mendatar:</h3>
+            <table border="2">
+                <tr>
+                    <td><h4>1. Pulau terbesar di Indonesia?</h4></td>
+                </tr>
+                <tr>
+                    <td><h4>2. Negara tetangga Indonesia dan terdapat menara kembar petronas?</h4></td>
+                </tr>
+                <tr>
+                    <td><h4>3. Negara dengan sebutan negeri tirai bambu?</h4></td>
+                </tr>
+                <tr>
+                    <td><h4>4. Danau Terbesar di Indonesia?</h4></td>
+                </tr>
+                <tr>
+                    <td><h4>5. Hewan dengan sebutan raja hutan?</h4></td>
+                </tr>
+            </table>
+        </div>
+        <div class="pertanyaan-menurun">
+            <h3>Pertanyaan Menurun:</h3>
+            <table border="2">
+                <tr>
+                    <td><h4>1. Pusat tata surya kita?</h4></td>
+                </tr>
+                <tr>
+                    <td><h4>2. Mata uang negara Jepang?</h4></td>
+                </tr>
+                <tr>
+                    <td><h4>3. Pulau paling timur di Indonesia?</h4></td>
+                </tr>
+                <tr>
+                    <td><h4>4. Negara dengan makanan terkenal kebab?</h4></td>
+                </tr>
+                <tr>
+                    <td><h4>5. Makanan pokok masyarakat Indonesia?</h4></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    
+
+    <button onclick="cekJawaban()">Cek Jawaban</button>
+    <div id="skor-container">
+        <p>Skor Anda: <span id="skor">0</span></p>
+      </div>
+
+      <button onclick="resetInput()">Reset</button> 
+
+    <footer class="footer">
+        <div class="footer-bottom">
+           tugas UTS - Riza Anwar Fadil (1227050116)
+        </div>
+      </footer>
+      
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

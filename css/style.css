@@ -1,0 +1,234 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #7b7a7a;
+  color: #333;
+}
+
+.crossword-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #333;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 25px); /* Sesuaikan jumlah kolom */
+  gap: 0 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+}
+
+.grid-item {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid #333;
+  background-color: #fff;
+  color: #333;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+.grid-number-mendatar {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  border: 1px solid #333;
+  align-items: center;
+  justify-content:right;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #333;
+  margin-top: 5px;
+}
+
+.grid-number-menurun {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  border: 1px solid #333;
+  align-items: end;
+  justify-content: center;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #333;
+  margin-top: 5px;
+}
+
+.grid-item.black {
+  background-color: #333;
+  color: #fff;
+  pointer-events: none;
+}
+
+.question-container {
+  display: flex; /* Menggunakan flexbox untuk tata letak berdampingan */
+  justify-content: space-between; /* Memberikan jarak antara kolom */
+  margin: 20px auto;
+  width: 80%; /* Menentukan lebar kontainer */
+  max-width: 1000px; /* Maksimal lebar untuk layar besar */
+}
+
+.pertanyaan-mendatar,
+.pertanyaan-menurun {
+  flex: 1; /* Mengizinkan kedua kolom untuk mengambil ruang yang sama */
+  margin: 0 10px; /* Menambahkan margin horizontal */
+  padding: 15px;
+  border: 1px solid #333;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+table {
+  width: 100%; /* Memanfaatkan lebar penuh dari kontainer */
+  border-collapse: collapse; /* Menghapus jarak antar border sel */
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #b3b3b3; /* Garis pemisah antar pertanyaan */
+}
+
+td h4 {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5; /* Spasi antar pertanyaan */
+}
+
+tr:hover {
+  background-color: #bdb2b2; /* Warna latar belakang saat hover */
+}
+
+button {
+  background-color: #4CAF50; /* Warna hijau */
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 8px 0;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect untuk tombol */
+button:hover {
+  background-color: #45a049;
+}
+
+.footer {
+  background-color: #333;
+  color: #f1f1f1;
+  padding: 20px 0;
+}
+
+#skor-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 200px;
+  margin: 20px auto;
+}
+
+#skor-container p {
+  margin: 0;
+}
+
+#skor {
+  color: #4caf50; /* Hijau untuk memberikan kesan skor positif */
+  font-size: 24px;
+  margin-left: 8px;
+}
+
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(12, 15px); /* Mengubah jumlah kolom pada layar kecil */
+    gap: 0 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .grid-item  {
+    height: 30px; /* Menyesuaikan tinggi item pada layar kecil */
+    width: 30px;
+    font-size: 7px; /* Menyesuaikan ukuran font pada layar kecil */
+  }
+  .grid-number-mendatar{
+    height: 30px; /* Menyesuaikan tinggi item pada layar kecil */
+    width: 30px;
+    font-size: 7px;
+  }
+  .grid-number-menurun {
+    height: 30px; /* Menyesuaikan tinggi item pada layar kecil */
+    width: 30px;
+    font-size: 7px;
+  }
+  .grid-item.black{
+    height: 30px; /* Menyesuaikan tinggi item pada layar kecil */
+    width: 30px;
+    font-size: 7px;
+  }
+
+  .question-container {
+    flex-direction: column; /* Ubah menjadi kolom pada layar kecil */
+    align-items: center; /* Memusatkan konten */
+}
+
+.pertanyaan-mendatar,
+.pertanyaan-menurun {
+    margin: 10px 0; /* Tambahkan margin vertikal */
+    width: 100%; /* Mengatur lebar menjadi 100% untuk layar kecil */
+}
+}
+
+@media (max-width: 400px) {
+  .grid {
+    grid-template-columns: repeat(12, 10px); /* Mengubah jumlah kolom lagi pada layar lebih kecil */
+    gap: 0 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .grid-item  {
+    height: 17px; /* Menyesuaikan tinggi item pada layar kecil */
+    width: 17px;
+    font-size: 7px; /* Menyesuaikan ukuran font pada layar kecil */
+  }
+  .grid-number-mendatar{
+    height: 17px; /* Menyesuaikan tinggi item pada layar kecil */
+    width: 17px;
+    font-size: 7px;
+  }
+  .grid-number-menurun {
+    height: 17px; /* Menyesuaikan tinggi item pada layar kecil */
+    width: 17px;
+    font-size: 7px;
+  }
+  .grid-item.black{
+    height: 17px; /* Menyesuaikan tinggi item pada layar kecil */
+    width: 17px;
+    font-size: 7px;
+  }
+}
